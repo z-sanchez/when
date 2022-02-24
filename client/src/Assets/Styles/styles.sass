@@ -1,0 +1,196 @@
+$background: #302839
+$white-text: #FFFFFF
+$accent-green: #00C9A9
+
+@font-face
+  font-family: roundPop
+  src: url('../fonts/roundPop.ttf') format('truetype')
+
+@font-face
+  font-family: osRegular
+  src: url('../fonts/openSans-regular.ttf') format('truetype')
+
+@font-face
+  font-family: osSemibold
+  src: url('../fonts/openSans-semibold.ttf') format('truetype')
+
+@mixin fontStyle($color: $background, $font: roundPop)
+  font-family: $font, "Nunito", sans-serif
+  color: $color
+
+@mixin spaceKiller
+  padding: 0
+  margin: 0
+
+@mixin centerAligned($flow: column)
+  display: flex
+  flex-flow: $flow
+  align-items: center
+  justify-content: center
+  align-content: center
+
+
+
+
+#appGrid
+  display: grid
+  grid-template-columns: auto
+  grid-template-rows: 135px auto auto
+  row-gap: 3%
+  justify-items: center
+
+
+
+
+
+#appHeader
+  @include centerAligned(column)
+  width: 100%
+  justify-content: space-between
+
+
+#logo
+  align-self: flex-start
+  @include centerAligned(row)
+  justify-content: flex-start
+  height: 50%
+  margin: 0 0 0 2%
+  img
+    width: 45%
+
+#currentDate
+  height: 45%
+  align-self: center
+  @include centerAligned(column)
+  h1
+    @include fontStyle($white-text, roundPop)
+    overflow: hidden
+    font-size: 145%
+    margin-bottom: 2%
+    height: 93%
+  .countdown--bar
+    height: 7%
+
+
+
+
+#addCountdown
+  @include centerAligned(column)
+  justify-content: flex-start
+  width: 100%
+  input
+    width: 28%
+    height: 35px
+    @include fontStyle($white-text, osRegular)
+    border: 3px solid $accent-green
+    background-color: $background
+    margin-bottom: 7%
+  input:hover
+    background-color: $accent-green
+
+  form
+    width: 90%
+    @include centerAligned(column)
+    align-items: flex-start
+
+#dateEntry
+  margin-bottom: 7%
+  label
+    @include fontStyle($white-text, osRegular)
+    width: 100%
+  input
+    margin-left: 3vw
+    width: 40%
+
+
+
+
+
+
+// used in both form and countdowns
+
+
+.countdownBoxFlex
+  @include centerAligned(row)
+  justify-content: space-between
+  flex-flow: wrap
+  width: 100%
+
+
+.countdownBox
+  @include centerAligned(column)
+  width: 28%
+  margin-bottom: 5%
+  p, h1
+    @include fontStyle($white-text, roundPop)
+    text-align: center
+    @include spaceKiller
+  p
+    font-size: 4vw
+  h1
+    font-size: 6vw
+
+
+.countdown--bar
+  width: 80%
+  background-color: $accent-green
+
+
+
+
+
+
+
+.countdownBox__count
+  border: 2px solid $background
+  box-shadow: 0 5px 10px #1F1925FF
+  padding: 30%
+  margin-bottom: 15%
+  p, h1
+    @include fontStyle($white-text, roundPop)
+    text-align: center
+    @include spaceKiller
+  p
+    font-size: 4vw
+  h1
+    font-size: 6vw
+
+
+.countdownBox__select
+  height: 15px
+  width: 15px
+  border: 2px solid $accent-green
+  border-radius: 50%
+
+
+
+
+
+
+
+
+
+
+#countdownFlex
+  @include centerAligned(column)
+  width: 90%
+  .countdown
+    width: 100%
+    @include fontStyle($white-text, osSemibold)
+    @include centerAligned(column)
+    h1
+      align-self: flex-start
+    .countdown--bar
+      align-self: flex-start
+      height: 5px
+    .countdownBoxFlex
+      margin-top: 8%
+
+
+
+
+
+
+
+//how does everything get there sizing if no parent has a size. How dod children percentages work
+//The Grid Does it

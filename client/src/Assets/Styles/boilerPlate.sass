@@ -1,0 +1,24 @@
+@mixin spaceKiller
+  padding: 0
+  margin: 0
+
+html
+  overflow-x: hidden
+  line-height: 1.6
+  font-family: "Nunito", sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+h1,
+h2,
+h3,
+h4,
+h5
+  line-height: 1.2
+
+#root, body
+  @include spaceKiller
+  background-color: #302839
+  width: 100vw
+
+

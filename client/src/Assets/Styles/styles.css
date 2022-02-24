@@ -1,0 +1,206 @@
+@font-face {
+  font-family: roundPop;
+  src: url("../fonts/roundPop.ttf") format("truetype");
+}
+@font-face {
+  font-family: osRegular;
+  src: url("../fonts/openSans-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: osSemibold;
+  src: url("../fonts/openSans-semibold.ttf") format("truetype");
+}
+#appGrid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 135px auto auto;
+  row-gap: 3%;
+  justify-items: center;
+}
+
+#appHeader {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#logo {
+  align-self: flex-start;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-content: flex-start;
+  height: 50%;
+  margin: 0 0 0 2%;
+}
+#logo img {
+  width: 45%;
+}
+
+#currentDate {
+  height: 45%;
+  align-self: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+#currentDate h1 {
+  font-family: roundPop, "Nunito", sans-serif;
+  color: #FFFFFF;
+  overflow: hidden;
+  font-size: 145%;
+  margin-bottom: 2%;
+  height: 93%;
+}
+#currentDate .countdown--bar {
+  height: 7%;
+}
+
+#addCountdown {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+#addCountdown input {
+  width: 28%;
+  height: 35px;
+  font-family: osRegular, "Nunito", sans-serif;
+  color: #FFFFFF;
+  border: 3px solid #00C9A9;
+  background-color: #302839;
+  margin-bottom: 7%;
+}
+#addCountdown input:hover {
+  background-color: #00C9A9;
+}
+#addCountdown form {
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+}
+
+#dateEntry {
+  margin-bottom: 7%;
+}
+#dateEntry label {
+  font-family: osRegular, "Nunito", sans-serif;
+  color: #FFFFFF;
+  width: 100%;
+}
+#dateEntry input {
+  margin-left: 3vw;
+  width: 40%;
+}
+
+.countdownBoxFlex {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-flow: wrap;
+  width: 100%;
+}
+
+.countdownBox {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 28%;
+  margin-bottom: 5%;
+}
+.countdownBox p, .countdownBox h1 {
+  font-family: roundPop, "Nunito", sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.countdownBox p {
+  font-size: 4vw;
+}
+.countdownBox h1 {
+  font-size: 6vw;
+}
+
+.countdown--bar {
+  width: 80%;
+  background-color: #00C9A9;
+}
+
+.countdownBox__count {
+  border: 2px solid #302839;
+  box-shadow: 0 5px 10px #1F1925FF;
+  padding: 30%;
+  margin-bottom: 15%;
+}
+.countdownBox__count p, .countdownBox__count h1 {
+  font-family: roundPop, "Nunito", sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.countdownBox__count p {
+  font-size: 4vw;
+}
+.countdownBox__count h1 {
+  font-size: 6vw;
+}
+
+.countdownBox__select {
+  height: 15px;
+  width: 15px;
+  border: 2px solid #00C9A9;
+  border-radius: 50%;
+}
+
+#countdownFlex {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 90%;
+}
+#countdownFlex .countdown {
+  width: 100%;
+  font-family: osSemibold, "Nunito", sans-serif;
+  color: #FFFFFF;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+#countdownFlex .countdown h1 {
+  align-self: flex-start;
+}
+#countdownFlex .countdown .countdown--bar {
+  align-self: flex-start;
+  height: 5px;
+}
+#countdownFlex .countdown .countdownBoxFlex {
+  margin-top: 8%;
+}
+
+/*# sourceMappingURL=styles.css.map */

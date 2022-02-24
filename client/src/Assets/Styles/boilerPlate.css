@@ -1,6 +1,5 @@
-@font-face;
 html {
-  overflow: hidden;
+  overflow-x: hidden;
   line-height: 1.6;
   font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,12 +14,11 @@ h5 {
   line-height: 1.2;
 }
 
-body {
+#root, body {
   padding: 0;
   margin: 0;
   background-color: #302839;
   width: 100vw;
-  height: 100vh;
 }
 
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=boilerPlate.css.map */

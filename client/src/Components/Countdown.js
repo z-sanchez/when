@@ -11,11 +11,44 @@ class Countdown extends React.Component {
                     <div className="countdown--bar"/>
                     <div className="countdownBoxFlex">
                         <div className="countdownBox">
-                            <p>Year</p>
-                            <h1>1</h1>
+                            <div className="countdownBox__count">
+                                <p>Year</p>
+                                <h1>1</h1>
+                            </div>
+                        </div>
+                        <div className="countdownBox">
+                            <div className="countdownBox__count">
+                                <p>Year</p>
+                                <h1>1</h1>
+                            </div>
+                        </div>
+                        <div className="countdownBox">
+                            <div className="countdownBox__count">
+                                <p>Year</p>
+                                <h1>1</h1>
+                            </div>
+                        </div>
+                        <div className="countdownBox">
+                            <div className="countdownBox__count">
+                                <p>Year</p>
+                                <h1>1</h1>
+                            </div>
+                        </div>
+                        <div className="countdownBox">
+                            <div className="countdownBox__count">
+                                <p>Year</p>
+                                <h1>1</h1>
+                            </div>
+                        </div>
+                        <div className="countdownBox">
+                            <div className="countdownBox__count">
+                                <p>Year</p>
+                                <h1>1</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>);
     }
 }
