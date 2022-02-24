@@ -7,8 +7,8 @@ function AddCountdown() {
             <form>
                 <div id="dateEntry">
                     <label>Enter Date:
-                        <input type="datetime-local" name="date_entry" id="enterDate"/>
                     </label>
+                    <input type="datetime-local" name="date_entry" id="enterDate"/>
                 </div>
                 <div className="countdownBoxFlex">
                     <div className="countdownBox">

@@ -72,6 +72,7 @@
   align-content: center;
   justify-content: flex-start;
   width: 100%;
+  max-height: 1000px;
 }
 #addCountdown input {
   width: 28%;
@@ -96,12 +97,21 @@
 }
 
 #dateEntry {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-content: flex-start;
   margin-bottom: 7%;
 }
 #dateEntry label {
   font-family: osRegular, "Nunito", sans-serif;
   color: #FFFFFF;
-  width: 100%;
+  width: 30%;
+}
+#dateEntry #enterDate {
+  margin-bottom: 0;
 }
 #dateEntry input {
   margin-left: 3vw;
@@ -174,6 +184,10 @@
   border-radius: 50%;
 }
 
+.countdownBox__select:hover {
+  background-color: #00C9A9;
+}
+
 #countdownFlex {
   display: flex;
   flex-flow: column;
@@ -184,6 +198,7 @@
 }
 #countdownFlex .countdown {
   width: 100%;
+  margin-bottom: 3%;
   font-family: osSemibold, "Nunito", sans-serif;
   color: #FFFFFF;
   display: flex;
@@ -201,6 +216,55 @@
 }
 #countdownFlex .countdown .countdownBoxFlex {
   margin-top: 8%;
+}
+
+@media screen and (min-width: 1000px) {
+  .countdownBoxFlex {
+    align-self: center;
+    width: 90%;
+  }
+  .countdownBoxFlex .countdownBox {
+    width: 3%;
+  }
+  .countdownBoxFlex .countdownBox .countdownBox__count h1, .countdownBoxFlex .countdownBox .countdownBox__count p {
+    font-size: 3vw;
+  }
+
+  .countdownBox__select {
+    height: 20px;
+    width: 20px;
+  }
+
+  form .countdownBoxFlex .countdownBox .countdownBox__count {
+    margin-bottom: 100%;
+  }
+
+  #addCountdown input {
+    width: 8%;
+    height: 40px;
+    align-self: flex-end;
+    margin: 0 10% 3% 0;
+    font-size: 1vw;
+  }
+  #addCountdown #dateEntry {
+    width: 60%;
+    margin-bottom: 3%;
+  }
+  #addCountdown #dateEntry label {
+    width: 20%;
+    font-size: 2vw;
+    text-align: start;
+  }
+  #addCountdown #dateEntry #enterDate {
+    width: 20%;
+    align-self: center;
+    height: 50%;
+    margin-left: 5%;
+  }
+
+  #countdownFlex .countdown .countdownBoxFlex {
+    margin-top: 4%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

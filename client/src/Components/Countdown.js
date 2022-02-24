@@ -48,7 +48,6 @@ class Countdown extends React.Component {
                         </div>
                     </div>
                 </div>
-
             </div>);
     }
 }
