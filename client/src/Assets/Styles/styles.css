@@ -105,6 +105,24 @@
   width: 100%;
   align-items: flex-start;
 }
+#addCountdown form .countdownBox:hover {
+  opacity: 0.5;
+}
+#addCountdown form .countdownBox:hover .countdownBox__select {
+  background-color: #302839;
+}
+#addCountdown form .countdownBox--off {
+  opacity: 0.5;
+}
+#addCountdown form .countdownBox--off .countdownBox__select {
+  background-color: #302839;
+}
+#addCountdown form .countdownBox--off:hover {
+  opacity: 1;
+}
+#addCountdown form .countdownBox--off:hover .countdownBox__select {
+  background-color: #00C9A9;
+}
 
 #dateEntry {
   display: flex;
@@ -192,11 +210,8 @@
   height: 15px;
   width: 15px;
   border: 2px solid #00C9A9;
-  border-radius: 50%;
-}
-
-.countdownBox__select:hover {
   background-color: #00C9A9;
+  border-radius: 50%;
 }
 
 #countdownFlex {

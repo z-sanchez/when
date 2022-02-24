@@ -92,7 +92,6 @@ $accent-green: #00C9A9
 
   .addButton--hover:hover
     background-color: $background
-
   #display
     display: none
     width: 90%
@@ -100,6 +99,18 @@ $accent-green: #00C9A9
     @include centerAligned(column)
     width: 100%
     align-items: flex-start
+    .countdownBox:hover
+      opacity: .5
+      .countdownBox__select
+        background-color: $background
+    .countdownBox--off
+      opacity: .5
+      .countdownBox__select
+        background-color: $background
+    .countdownBox--off:hover
+      opacity: 1
+      .countdownBox__select
+        background-color: $accent-green
 
 
 #dateEntry
@@ -173,10 +184,9 @@ $accent-green: #00C9A9
   height: 15px
   width: 15px
   border: 2px solid $accent-green
+  background-color: $accent-green
   border-radius: 50%
 
-.countdownBox__select:hover
-  background-color: $accent-green
 
 
 
