@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 135px auto auto;
-  row-gap: 3%;
+  row-gap: 25px;
   justify-items: center;
 }
 
@@ -86,14 +86,23 @@
 #addCountdown input:hover {
   background-color: #00C9A9;
 }
+#addCountdown .addButton--hover {
+  background-color: #00C9A9;
+}
+#addCountdown .addButton--hover:hover {
+  background-color: #302839;
+}
+#addCountdown #display {
+  display: none;
+  width: 90%;
+}
 #addCountdown form {
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
   align-content: center;
-  display: none;
-  width: 90%;
+  width: 100%;
   align-items: flex-start;
 }
 
@@ -159,9 +168,10 @@
 }
 
 .countdownBox__count {
+  width: 100%;
+  padding: 20% 0 20% 0;
   border: 2px solid #302839;
   box-shadow: 0 5px 10px #1F1925FF;
-  padding: 30%;
   margin-bottom: 15%;
 }
 .countdownBox__count p, .countdownBox__count h1 {
@@ -225,10 +235,10 @@
     width: 90%;
   }
   .countdownBoxFlex .countdownBox {
-    width: 3%;
+    width: 12%;
   }
   .countdownBoxFlex .countdownBox .countdownBox__count h1, .countdownBoxFlex .countdownBox .countdownBox__count p {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   .countdownBox__select {
@@ -244,7 +254,7 @@
     font-size: 1vw;
   }
   #addCountdown form .countdownBoxFlex .countdownBox .countdownBox__count {
-    margin-bottom: 100%;
+    margin-bottom: 30%;
   }
   #addCountdown #dateEntry {
     width: 60%;

@@ -37,7 +37,7 @@ $accent-green: #00C9A9
   display: grid
   grid-template-columns: auto
   grid-template-rows: 135px auto auto
-  row-gap: 3%
+  row-gap: 25px
   justify-items: center
 
 
@@ -73,8 +73,6 @@ $accent-green: #00C9A9
     height: 7%
 
 
-
-
 #addCountdown
   @include centerAligned(column)
   justify-content: flex-start
@@ -89,11 +87,18 @@ $accent-green: #00C9A9
     margin-bottom: 7%
   input:hover
     background-color: $accent-green
+  .addButton--hover
+    background-color: $accent-green
 
-  form
-    @include centerAligned(column)
+  .addButton--hover:hover
+    background-color: $background
+
+  #display
     display: none
     width: 90%
+  form
+    @include centerAligned(column)
+    width: 100%
     align-items: flex-start
 
 
@@ -149,9 +154,10 @@ $accent-green: #00C9A9
 
 
 .countdownBox__count
+  width: 100%
+  padding: 20% 0 20% 0
   border: 2px solid $background
   box-shadow: 0 5px 10px #1F1925FF
-  padding: 30%
   margin-bottom: 15%
   p, h1
     @include fontStyle($white-text, roundPop)
@@ -204,10 +210,10 @@ $accent-green: #00C9A9
     align-self: center
     width: 90%
     .countdownBox
-      width: 3%
+      width: 12%
       .countdownBox__count
         h1, p
-          font-size: 3vw
+          font-size: 2vw
 
   .countdownBox__select
     height: 20px
@@ -225,7 +231,7 @@ $accent-green: #00C9A9
       .countdownBoxFlex
         .countdownBox
           .countdownBox__count
-            margin-bottom: 100%
+            margin-bottom: 30%
 
     #dateEntry
       width: 60%
