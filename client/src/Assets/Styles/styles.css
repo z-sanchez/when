@@ -87,12 +87,13 @@
   background-color: #00C9A9;
 }
 #addCountdown form {
-  width: 90%;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
   align-content: center;
+  display: none;
+  width: 90%;
   align-items: flex-start;
 }
 
@@ -235,16 +236,15 @@
     width: 20px;
   }
 
-  form .countdownBoxFlex .countdownBox .countdownBox__count {
-    margin-bottom: 100%;
-  }
-
   #addCountdown input {
     width: 8%;
     height: 40px;
     align-self: flex-end;
-    margin: 0 10% 3% 0;
+    margin: 0 5% 3% 0;
     font-size: 1vw;
+  }
+  #addCountdown form .countdownBoxFlex .countdownBox .countdownBox__count {
+    margin-bottom: 100%;
   }
   #addCountdown #dateEntry {
     width: 60%;
