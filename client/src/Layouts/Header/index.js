@@ -23,7 +23,7 @@ function Header() {
             <img src={logo} alt="appLogo"/>
         </div>
         <div id="currentDate">
-            <h1>{currentTime.toLocaleTimeString()}</h1>
+            <h1>{currentTime.toLocaleString('default', { month: 'long' }) + " " + currentTime.getDate() + " " + currentTime.toLocaleTimeString()}</h1>
             <div className="countdown--bar"/>
         </div>
     </header>);
