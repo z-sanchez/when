@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import logo from "../../Assets/Images/Logo.svg";
+import logo from "../../Assets/Images/Logo.png";
 
 function Header() {
 
