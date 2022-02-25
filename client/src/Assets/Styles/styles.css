@@ -136,13 +136,14 @@
 #dateEntry label {
   font-family: osRegular, "Nunito", sans-serif;
   color: #FFFFFF;
+  font-size: 2vw;
   width: 30%;
 }
 #dateEntry #enterDate {
   margin-bottom: 0;
 }
 #dateEntry input {
-  margin-left: 3vw;
+  margin: 0 2% 0 3vw;
   width: 40%;
 }
 
@@ -276,7 +277,7 @@
     margin-bottom: 30%;
   }
   #addCountdown #dateEntry {
-    width: 60%;
+    width: 80%;
     margin-bottom: 3%;
   }
   #addCountdown #dateEntry label {
@@ -289,6 +290,11 @@
     align-self: center;
     height: 50%;
     margin-left: 5%;
+  }
+  #addCountdown #dateEntry input {
+    width: 20%;
+    align-self: center;
+    margin-bottom: 0;
   }
 
   #countdownFlex .countdown .countdownBoxFlex {

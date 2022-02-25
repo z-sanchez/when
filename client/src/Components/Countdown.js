@@ -1,49 +1,25 @@
 import React from "react";
+import CountdownBox from "./CountdownBox";
 
-class Countdown extends React.Component {
+const Countdown = (props) => {
 
+    let date = Date.parse(props.date);
 
-    render() {
-        return (
-            <div id="countdownFlex">
-                <div className="countdown">
-                    <h1>Z & C Wedding</h1>
-                    <div className="countdown--bar"/>
-                    <div className="countdownBoxFlex">
-                        <div className="countdownBox">
-                            <div className="countdownBox__count">
-                                <p>Year</p>
-                                <h1>1</h1>
-                            </div>
-                        </div>
-                        <div className="countdownBox">
-                            <div className="countdownBox__count">
-                                <p>Year</p>
-                                <h1>1</h1>
-                            </div>
-                        </div>
-                        <div className="countdownBox">
-                            <div className="countdownBox__count">
-                                <p>Year</p>
-                                <h1>1</h1>
-                            </div>
-                        </div>
-                        <div className="countdownBox">
-                            <div className="countdownBox__count">
-                                <p>Year</p>
-                                <h1>1</h1>
-                            </div>
-                        </div>
-                        <div className="countdownBox">
-                            <div className="countdownBox__count">
-                                <p>Year</p>
-                                <h1>1</h1>
-                            </div>
-                        </div>
-                    </div>
+    return (
+        <div id="countdownFlex">
+            <div className="countdown">
+                <h1>{props.name}</h1>
+                <div className="countdown--bar"/>
+                <div className="countdownBoxFlex">
+                    <CountdownBox select={false} display={"year"} date={date}/>
+                    <CountdownBox select={false} display={"day"} date={date}/>
+                    <CountdownBox select={false} display={"hour"} date={date}/>
+                    <CountdownBox select={false} display={"minute"} date={date}/>
+                    <CountdownBox select={false} display={"second"} date={date}/>
                 </div>
-            </div>);
-    }
+            </div>
+        </div>);
 }
+
 
 export default Countdown;

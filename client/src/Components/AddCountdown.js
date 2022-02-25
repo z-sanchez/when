@@ -1,16 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import CountdownBox from "./CountdownBox";
 
-function AddCountdown() {
+const AddCountdown = (props) => {
 
-    const [date, setDate] = useState(null)
-
-    useEffect(() => {
-        console.log('Side Effect' + date);
-    })
+    const [date, setDate] = useState(null);
 
 
-    function toggleForm() {
+    const toggleForm = () => {
         const form = document.getElementById('display');
         const button = document.getElementById('addButton');
 
@@ -23,6 +19,11 @@ function AddCountdown() {
             form.style.display = '';
             button.style.backgroundColor = "";
             button.value = "Add";
+            let countdownObject = {
+                date: document.getElementById('enterDate').value,
+                name: document.getElementById('enterName').value,
+            }
+            props.add(countdownObject);
         }
     }
 
@@ -40,6 +41,9 @@ function AddCountdown() {
                     <label>Enter Date:
                     </label>
                     <input type="datetime-local" name="date_entry" id="enterDate" onChange={updateDate}/>
+                    <label>Enter Name:
+                    </label>
+                    <input id="enterName" type="text"/>
                 </div>
                 <div className="countdownBoxFlex">
                     <CountdownBox select={true} display={"year"} date={date}/>
