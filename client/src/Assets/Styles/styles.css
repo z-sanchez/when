@@ -152,7 +152,6 @@
   align-items: center;
   justify-content: center;
   align-content: center;
-  justify-content: space-between;
   flex-flow: wrap;
   width: 100%;
 }
@@ -164,7 +163,7 @@
   justify-content: center;
   align-content: center;
   width: 28%;
-  margin-bottom: 5%;
+  margin: 2%;
 }
 .countdownBox p, .countdownBox h1 {
   font-family: roundPop, "Nunito", sans-serif;
@@ -178,6 +177,8 @@
 }
 .countdownBox h1 {
   font-size: 6vw;
+  font-family: osSemiBold, "Nunito", sans-serif;
+  color: #FFFFFF;
 }
 
 .countdown--bar {
@@ -204,6 +205,8 @@
 }
 .countdownBox__count h1 {
   font-size: 6vw;
+  font-family: osSemiBold, "Nunito", sans-serif;
+  color: #FFFFFF;
 }
 
 .countdownBox__select {
@@ -251,6 +254,7 @@
   }
   .countdownBoxFlex .countdownBox {
     width: 12%;
+    margin: 4%;
   }
   .countdownBoxFlex .countdownBox .countdownBox__count h1, .countdownBoxFlex .countdownBox .countdownBox__count p {
     font-size: 2vw;

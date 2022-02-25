@@ -135,7 +135,6 @@ $accent-green: #00C9A9
 
 .countdownBoxFlex
   @include centerAligned(row)
-  justify-content: space-between
   flex-flow: wrap
   width: 100%
 
@@ -143,7 +142,7 @@ $accent-green: #00C9A9
 .countdownBox
   @include centerAligned(column)
   width: 28%
-  margin-bottom: 5%
+  margin: 2%
   p, h1
     @include fontStyle($white-text, roundPop)
     text-align: center
@@ -152,6 +151,7 @@ $accent-green: #00C9A9
     font-size: 4vw
   h1
     font-size: 6vw
+    @include fontStyle($white-text, osSemiBold)
 
 
 .countdown--bar
@@ -178,6 +178,7 @@ $accent-green: #00C9A9
     font-size: 4vw
   h1
     font-size: 6vw
+    @include fontStyle($white-text, osSemiBold)
 
 
 .countdownBox__select
@@ -221,6 +222,7 @@ $accent-green: #00C9A9
     width: 90%
     .countdownBox
       width: 12%
+      margin: 4%
       .countdownBox__count
         h1, p
           font-size: 2vw

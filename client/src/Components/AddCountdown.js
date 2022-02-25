@@ -28,7 +28,7 @@ function AddCountdown() {
 
     function updateDate() {
         let date = document.getElementById('enterDate').value;
-        setDate(date);
+        setDate(Date.parse(date));
     }
 
     return (
@@ -42,42 +42,11 @@ function AddCountdown() {
                     <input type="datetime-local" name="date_entry" id="enterDate" onChange={updateDate}/>
                 </div>
                 <div className="countdownBoxFlex">
-                    <CountdownBox select={true} time={"year"} date={date}/>
-                    <div className="countdownBox">
-                        <div className="countdownBox__count">
-                            <p>Months</p>
-                            <h1>1</h1>
-                        </div>
-                        <div className="countdownBox__select"/>
-                    </div>
-                    <div className="countdownBox">
-                        <div className="countdownBox__count">
-                            <p>Days</p>
-                            <h1>1</h1>
-                        </div>
-                        <div className="countdownBox__select"/>
-                    </div>
-                    <div className="countdownBox">
-                        <div className="countdownBox__count">
-                            <p>Hours</p>
-                            <h1>1</h1>
-                        </div>
-                        <div className="countdownBox__select"/>
-                    </div>
-                    <div className="countdownBox">
-                        <div className="countdownBox__count">
-                            <p>Minutes</p>
-                            <h1>1</h1>
-                        </div>
-                        <div className="countdownBox__select"/>
-                    </div>
-                    <div className="countdownBox">
-                        <div className="countdownBox__count">
-                            <p>Seconds</p>
-                            <h1>1</h1>
-                        </div>
-                        <div className="countdownBox__select"/>
-                    </div>
+                    <CountdownBox select={true} display={"year"} date={date}/>
+                    <CountdownBox select={true} display={"day"} date={date}/>
+                    <CountdownBox select={true} display={"hour"} date={date}/>
+                    <CountdownBox select={true} display={"minute"} date={date}/>
+                    <CountdownBox select={true} display={"second"} date={date}/>
                 </div>
             </form>
             </span>

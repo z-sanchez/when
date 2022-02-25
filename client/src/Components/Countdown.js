@@ -40,12 +40,6 @@ class Countdown extends React.Component {
                                 <h1>1</h1>
                             </div>
                         </div>
-                        <div className="countdownBox">
-                            <div className="countdownBox__count">
-                                <p>Year</p>
-                                <h1>1</h1>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>);
