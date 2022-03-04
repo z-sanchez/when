@@ -76,6 +76,7 @@
 }
 #addCountdown input {
   width: 28%;
+  margin-bottom: 7%;
   font-family: osRegular, "Nunito", sans-serif;
   color: #FFFFFF;
   border: 3px solid #00C9A9;
@@ -103,24 +104,6 @@
   width: 100%;
   align-items: flex-start;
 }
-#addCountdown form .countdownBox:hover {
-  opacity: 0.5;
-}
-#addCountdown form .countdownBox:hover .countdownBox__select {
-  background-color: #302839;
-}
-#addCountdown form .countdownBox--off {
-  opacity: 0.5;
-}
-#addCountdown form .countdownBox--off .countdownBox__select {
-  background-color: #302839;
-}
-#addCountdown form .countdownBox--off:hover {
-  opacity: 1;
-}
-#addCountdown form .countdownBox--off:hover .countdownBox__select {
-  background-color: #00C9A9;
-}
 
 #dateEntry {
   display: flex;
@@ -129,7 +112,7 @@
   justify-content: center;
   align-content: center;
   justify-content: flex-start;
-  margin-bottom: 7%;
+  margin: 0 0 7% 0;
 }
 #dateEntry label {
   font-family: osRegular, "Nunito", sans-serif;
@@ -208,14 +191,6 @@
   color: #FFFFFF;
 }
 
-.countdownBox__select {
-  height: 15px;
-  width: 15px;
-  border: 2px solid #00C9A9;
-  background-color: #00C9A9;
-  border-radius: 50%;
-}
-
 #countdownFlex {
   display: flex;
   flex-flow: column;
@@ -264,11 +239,6 @@
     font-size: 2vw;
   }
 
-  .countdownBox__select {
-    height: 20px;
-    width: 20px;
-  }
-
   #addCountdown input {
     width: 8%;
     align-self: flex-end;
@@ -277,6 +247,9 @@
   }
   #addCountdown form .countdownBoxFlex .countdownBox .countdownBox__count {
     margin-bottom: 30%;
+  }
+  #addCountdown form input {
+    margin-top: 0;
   }
   #addCountdown #dateEntry {
     width: 80%;

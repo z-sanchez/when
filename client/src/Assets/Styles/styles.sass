@@ -79,6 +79,7 @@ $accent-green: #00C9A9
   max-height: 1000px
   input
     width: 28%
+    margin-bottom: 7%
     @include fontStyle($white-text, osRegular)
     border: 3px solid $accent-green
     background-color: $background
@@ -96,24 +97,12 @@ $accent-green: #00C9A9
     @include centerAligned(column)
     width: 100%
     align-items: flex-start
-    .countdownBox:hover
-      opacity: .5
-      .countdownBox__select
-        background-color: $background
-    .countdownBox--off
-      opacity: .5
-      .countdownBox__select
-        background-color: $background
-    .countdownBox--off:hover
-      opacity: 1
-      .countdownBox__select
-        background-color: $accent-green
 
 
 #dateEntry
   @include centerAligned(row)
   justify-content: flex-start
-  margin-bottom: 7%
+  margin: 0 0 7% 0
   label
     @include fontStyle($white-text, osRegular)
     font-size: 2vw
@@ -179,14 +168,6 @@ $accent-green: #00C9A9
     @include fontStyle($white-text, osSemiBold)
 
 
-.countdownBox__select
-  height: 15px
-  width: 15px
-  border: 2px solid $accent-green
-  background-color: $accent-green
-  border-radius: 50%
-
-
 
 
 
@@ -230,9 +211,6 @@ $accent-green: #00C9A9
         h1, p
           font-size: 2vw
 
-  .countdownBox__select
-    height: 20px
-    width: 20px
 
 
   #addCountdown
@@ -246,6 +224,8 @@ $accent-green: #00C9A9
         .countdownBox
           .countdownBox__count
             margin-bottom: 30%
+      input
+        margin-top: 0
 
     #dateEntry
       width: 80%

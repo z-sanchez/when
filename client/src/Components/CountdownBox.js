@@ -60,21 +60,13 @@ class CountdownBox extends React.Component {
     }
 
 
-    renderSelect() {
-        if (this.props.select) return (<div className="countdownBox__select"/>);
-    }
-
     render() {
-        let shading = "countdownBox";
-        if (!this.state.on) shading = "countdownBox countdownBox--off";
-
         return (
-            <div className={shading} onClick={this.toggleState}>
+            <div className="countdownBox" onClick={this.toggleState}>
                 <div className="countdownBox__count">
                     <p>{this.props.display}</p>
                     <h1>{this.state.value}</h1>
                 </div>
-                {this.renderSelect()}
             </div>
         );
     };

@@ -46,11 +46,11 @@ const AddCountdown = (props) => {
                     <input id="enterName" type="text"/>
                 </div>
                 <div className="countdownBoxFlex">
-                    <CountdownBox select={true} display={"year"} date={date}/>
-                    <CountdownBox select={true} display={"day"} date={date}/>
-                    <CountdownBox select={true} display={"hour"} date={date}/>
-                    <CountdownBox select={true} display={"minute"} date={date}/>
-                    <CountdownBox select={true} display={"second"} date={date}/>
+                    <CountdownBox display={"year"} date={date}/>
+                    <CountdownBox display={"day"} date={date}/>
+                    <CountdownBox display={"hour"} date={date}/>
+                    <CountdownBox display={"minute"} date={date}/>
+                    <CountdownBox display={"second"} date={date}/>
                 </div>
             </form>
             </span>
