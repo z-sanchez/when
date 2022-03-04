@@ -54,25 +54,22 @@ $accent-green: #00C9A9
   align-self: flex-start
   @include centerAligned(row)
   justify-content: flex-start
-  height: 50%
   margin: 0 0 0 2%
   img
     margin-top: 15%
     width: 30vw
-    height: 6vh
+    height: auto
 
 #currentDate
-  height: 45%
+  height: 50%
   align-self: center
   @include centerAligned(column)
   h1
     @include fontStyle($white-text, roundPop)
-    overflow: hidden
-    font-size: 145%
-    margin-bottom: 2%
-    height: 93%
+    @include spaceKiller
+    font-size: 3vh
   .countdown--bar
-    height: 7%
+    height: 5px
 
 
 #addCountdown
@@ -82,11 +79,9 @@ $accent-green: #00C9A9
   max-height: 1000px
   input
     width: 28%
-    height: 35px
     @include fontStyle($white-text, osRegular)
     border: 3px solid $accent-green
     background-color: $background
-    margin-bottom: 7%
   input:hover
     background-color: $accent-green
   .addButton--hover
@@ -243,9 +238,8 @@ $accent-green: #00C9A9
   #addCountdown
     input
       width: 8%
-      height: 40px
       align-self: flex-end
-      margin: 0 5% 3% 0
+      margin: 3% 5% 3% 0
       font-size: 1vw
     form
       .countdownBoxFlex
