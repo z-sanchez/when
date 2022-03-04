@@ -13,14 +13,20 @@ class App extends React.Component {
         this.addCountdown = this.addCountdown.bind(this);
 
         this.state = {
-            countdowns: [{date: '2023-04-14T00:00', name: 'Z & C Wedding'}],
+            countdowns: [{date: '2023-01-01T00:00', name: '2023'}],
         }
     }
 
 
     addCountdown(countdownObject) {
         let array = this.state.countdowns;
+
+        let now = new Date().getTime();
+        let date = Date.parse(countdownObject.date);
+        if (date < now || isNaN(date)) return;
+
         array.push(countdownObject);
+
         this.setState({
             countdowns: array,
         });
@@ -34,7 +40,6 @@ class App extends React.Component {
     }
 
     render() {
-        console.log(this.state.countdowns);
         return (
             <div id="appGrid">
                 <Header/>

@@ -16,9 +16,7 @@ class CountdownBox extends React.Component {
             let now = new Date().getTime();
 
             if (this.props.date > now) {
-
                 let countdown = this.props.date - now;
-
 
                 switch (this.props.display) {
                     case 'year':

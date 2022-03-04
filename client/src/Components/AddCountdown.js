@@ -6,24 +6,28 @@ const AddCountdown = (props) => {
     const [date, setDate] = useState(null);
 
 
-    const toggleForm = () => {
+    const toggleForm = (cancel) => {
         const form = document.getElementById('display');
         const button = document.getElementById('addButton');
+        const cancelButton = document.getElementById('cancelButton');
 
         if (form.style.display === '') {
             form.style.display = 'block';
             button.value = "Done";
             button.classList.add('addButton--hover');
-        }
-        else {
+            cancelButton.style.display = 'block';
+        } else {
+            cancelButton.style.display = 'none';
             form.style.display = '';
             button.style.backgroundColor = "";
             button.value = "Add";
-            let countdownObject = {
-                date: document.getElementById('enterDate').value,
-                name: document.getElementById('enterName').value,
+            if (cancel === false) {
+                let countdownObject = {
+                    date: document.getElementById('enterDate').value,
+                    name: document.getElementById('enterName').value,
+                }
+                props.add(countdownObject);
             }
-            props.add(countdownObject);
         }
     }
 
@@ -34,7 +38,10 @@ const AddCountdown = (props) => {
 
     return (
         <div id='addCountdown'>
-            <input type="button" value="Add" id="addButton" onClick={toggleForm}/>
+            <div id="buttonFlex">
+                <input type="button" value="Cancel" id="cancelButton" onClick={() => {toggleForm(true)}}/>
+                <input type="button" value="Add" id="addButton" onClick={() => {toggleForm(false)}}/>
+            </div>
             <span id="display">
             <form>
                 <div id="dateEntry">

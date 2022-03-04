@@ -64,6 +64,19 @@
   height: 5px;
 }
 
+#buttonFlex {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-content: end;
+  width: 100%;
+}
+#buttonFlex #cancelButton {
+  display: none;
+}
+
 #addCountdown {
   display: flex;
   flex-flow: column;
@@ -77,6 +90,7 @@
 #addCountdown input {
   width: 28%;
   margin-bottom: 7%;
+  margin-right: 3%;
   font-family: osRegular, "Nunito", sans-serif;
   color: #FFFFFF;
   border: 3px solid #00C9A9;
