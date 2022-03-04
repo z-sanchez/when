@@ -6,7 +6,7 @@ class CountdownBox extends React.Component {
         super(props);
         this.state = {
             on: true,
-            value: 0,
+            value: '...',
         };
     }
 
