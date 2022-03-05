@@ -15,7 +15,7 @@ class CountdownBox extends React.Component {
             let result = null;
             let now = new Date().getTime();
 
-            if (this.props.date > now) {
+            if (this.props.date > now) { //if entered date is in the future
                 let countdown = this.props.date - now;
 
                 switch (this.props.display) {
@@ -47,7 +47,7 @@ class CountdownBox extends React.Component {
         , 1000);
     }
 
-    componentWillUnmount() {
+    componentWillUnmount() { //stop countdown on unmount
         clearInterval(this.count);
     }
 

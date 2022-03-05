@@ -11,7 +11,7 @@ const AddCountdown = (props) => {
         const button = document.getElementById('addButton');
         const cancelButton = document.getElementById('cancelButton');
 
-        if (form.style.display === '') {
+        if (form.style.display === '') { //if form is not visible
             form.style.display = 'block';
             button.value = "Done";
             button.classList.add('addButton--hover');
@@ -21,7 +21,7 @@ const AddCountdown = (props) => {
             form.style.display = '';
             button.style.backgroundColor = "";
             button.value = "Add";
-            if (cancel === false) {
+            if (cancel === false) { //if cancel was not pressed
                 let countdownObject = {
                     date: document.getElementById('enterDate').value,
                     name: document.getElementById('enterName').value,
@@ -39,8 +39,12 @@ const AddCountdown = (props) => {
     return (
         <div id='addCountdown'>
             <div id="buttonFlex">
-                <input type="button" value="Cancel" id="cancelButton" onClick={() => {toggleForm(true)}}/>
-                <input type="button" value="Add" id="addButton" onClick={() => {toggleForm(false)}}/>
+                <input type="button" value="Cancel" id="cancelButton" onClick={() => {
+                    toggleForm(true)
+                }}/>
+                <input type="button" value="Add" id="addButton" onClick={() => {
+                    toggleForm(false)
+                }}/>
             </div>
             <span id="display">
             <form>

@@ -21,6 +21,7 @@ class App extends React.Component {
     addCountdown(countdownObject) {
         let array = this.state.countdowns;
 
+        //if entered date is in the past or is empty do nothing
         let now = new Date().getTime();
         let date = Date.parse(countdownObject.date);
         if (date < now || isNaN(date)) return;
