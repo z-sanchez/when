@@ -11,7 +11,6 @@ class App extends React.Component {
         super(props);
 
         this.addCountdown = this.addCountdown.bind(this);
-
         this.state = {
             countdowns: [{date: '2023-01-01T00:00', name: '2023'}],
         }
@@ -36,7 +35,7 @@ class App extends React.Component {
 
     renderCountdowns = () => {
         return this.state.countdowns.map((countdown, index) => {
-            return <Countdown  key={index} name={countdown.name} date={countdown.date}/>
+            return <Countdown key={index} name={countdown.name} date={countdown.date}/>
         });
     }
 
