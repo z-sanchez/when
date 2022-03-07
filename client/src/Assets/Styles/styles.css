@@ -13,7 +13,7 @@
 #appGrid {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 135px auto auto;
+  grid-template-rows: auto auto auto;
   row-gap: 25px;
   justify-items: center;
 }
@@ -36,12 +36,13 @@
   justify-content: center;
   align-content: center;
   justify-content: flex-start;
-  margin: 0 0 0 2%;
+  margin: 0 0 2% 2%;
 }
 #logo img {
-  margin-top: 15%;
-  width: 30vw;
+  margin-top: 5%;
+  width: auto;
   height: auto;
+  max-width: 250px;
 }
 
 #currentDate {
@@ -58,7 +59,7 @@
   color: #FFFFFF;
   padding: 0;
   margin: 0;
-  font-size: 3vh;
+  font-size: 6vw;
 }
 #currentDate .countdown--bar {
   height: 5px;
@@ -70,7 +71,7 @@
   align-items: center;
   justify-content: center;
   align-content: center;
-  justify-content: end;
+  justify-content: flex-end;
   width: 100%;
 }
 #buttonFlex #cancelButton {
@@ -85,15 +86,13 @@
   align-content: center;
   justify-content: flex-start;
   width: 100%;
-  max-height: 1000px;
 }
 #addCountdown input {
   width: 28%;
-  margin-bottom: 7%;
   margin-right: 3%;
   font-family: osRegular, "Nunito", sans-serif;
   color: #FFFFFF;
-  border: 3px solid #00C9A9;
+  border-style: none;
   background-color: #302839;
 }
 #addCountdown input:hover {
@@ -110,6 +109,7 @@
   width: 90%;
 }
 #addCountdown form {
+  margin-top: 5%;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -226,6 +226,7 @@
 }
 #countdownFlex .countdown h1 {
   align-self: flex-start;
+  margin-top: 0;
 }
 #countdownFlex .countdown .countdown--bar {
   align-self: flex-start;
@@ -236,11 +237,6 @@
 }
 
 @media screen and (min-width: 1000px) {
-  #logo img {
-    width: 15vw;
-    height: 10vh;
-  }
-
   .countdownBoxFlex {
     align-self: center;
     width: 90%;
@@ -253,11 +249,18 @@
     font-size: 2vw;
   }
 
+  #currentDate h1 {
+    font-size: 2vw;
+  }
+
   #addCountdown input {
     width: 8%;
     align-self: flex-end;
     margin: 3% 5% 3% 0;
     font-size: 1vw;
+  }
+  #addCountdown form {
+    margin-top: 3%;
   }
   #addCountdown form .countdownBoxFlex .countdownBox .countdownBox__count {
     margin-bottom: 30%;

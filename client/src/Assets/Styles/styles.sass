@@ -36,7 +36,7 @@ $accent-green: #00C9A9
 #appGrid
   display: grid
   grid-template-columns: auto
-  grid-template-rows: 135px auto auto
+  grid-template-rows: auto auto auto
   row-gap: 25px
   justify-items: center
 
@@ -54,11 +54,12 @@ $accent-green: #00C9A9
   align-self: flex-start
   @include centerAligned(row)
   justify-content: flex-start
-  margin: 0 0 0 2%
+  margin: 0 0 2% 2%
   img
-    margin-top: 15%
-    width: 30vw
+    margin-top: 5%
+    width: auto
     height: auto
+    max-width: 250px
 
 #currentDate
   height: 50%
@@ -67,13 +68,13 @@ $accent-green: #00C9A9
   h1
     @include fontStyle($white-text, roundPop)
     @include spaceKiller
-    font-size: 3vh
+    font-size: 6vw
   .countdown--bar
     height: 5px
 
 #buttonFlex
   @include centerAligned(row)
-  justify-content: end
+  justify-content: flex-end
   width: 100%
   #cancelButton
     display: none
@@ -82,13 +83,11 @@ $accent-green: #00C9A9
   @include centerAligned(column)
   justify-content: flex-start
   width: 100%
-  max-height: 1000px
   input
     width: 28%
-    margin-bottom: 7%
     margin-right: 3%
     @include fontStyle($white-text, osRegular)
-    border: 3px solid $accent-green
+    border-style: none
     background-color: $background
   input:hover
     background-color: $accent-green
@@ -101,6 +100,7 @@ $accent-green: #00C9A9
     display: none
     width: 90%
   form
+    margin-top: 5%
     @include centerAligned(column)
     width: 100%
     align-items: flex-start
@@ -192,6 +192,7 @@ $accent-green: #00C9A9
     @include centerAligned(column)
     h1
       align-self: flex-start
+      margin-top: 0
     .countdown--bar
       align-self: flex-start
       height: 5px
@@ -202,12 +203,6 @@ $accent-green: #00C9A9
 
 
 @media screen and (min-width: 1000px)
-
-  #logo
-    img
-      width: 15vw
-      height: 10vh
-
   .countdownBoxFlex
     align-self: center
     width: 90%
@@ -218,7 +213,9 @@ $accent-green: #00C9A9
         h1, p
           font-size: 2vw
 
-
+  #currentDate
+    h1
+      font-size: 2vw
 
   #addCountdown
     input
@@ -227,6 +224,7 @@ $accent-green: #00C9A9
       margin: 3% 5% 3% 0
       font-size: 1vw
     form
+      margin-top: 3%
       .countdownBoxFlex
         .countdownBox
           .countdownBox__count
