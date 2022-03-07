@@ -39,12 +39,12 @@ const AddCountdown = (props) => {
     return (
         <div id='addCountdown'>
             <div id="buttonFlex">
-                <input type="button" value="Cancel" id="cancelButton" onClick={() => {
+                <button id="cancelButton" onClick={() => {
                     toggleForm(true)
-                }}/>
-                <input type="button" value="Add" id="addButton" onClick={() => {
+                }}>Cancel</button>
+                <button id="addButton" onClick={() => {
                     toggleForm(false)
-                }}/>
+                }}>Add</button>
             </div>
             <span id="display">
             <form>

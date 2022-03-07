@@ -73,6 +73,7 @@
   align-content: center;
   justify-content: flex-end;
   width: 100%;
+  height: 5vh;
 }
 #buttonFlex #cancelButton {
   display: none;
@@ -87,16 +88,21 @@
   justify-content: flex-start;
   width: 100%;
 }
-#addCountdown input {
-  width: 28%;
-  margin-right: 3%;
+#addCountdown button {
+  height: 80%;
+  width: 20%;
+  margin-right: 5%;
   font-family: osRegular, "Nunito", sans-serif;
   color: #FFFFFF;
-  border-style: none;
+  border: 3px solid #00C9A9;
   background-color: #302839;
 }
-#addCountdown input:hover {
+#addCountdown button:hover {
   background-color: #00C9A9;
+}
+#addCountdown button:hover .help {
+  width: 100%;
+  text-align: center;
 }
 #addCountdown .addButton--hover {
   background-color: #00C9A9;
@@ -253,12 +259,10 @@
     font-size: 2vw;
   }
 
-  #addCountdown input {
+  #buttonFlex button {
     width: 8%;
-    align-self: flex-end;
-    margin: 3% 5% 3% 0;
-    font-size: 1vw;
   }
+
   #addCountdown form {
     margin-top: 3%;
   }
@@ -281,7 +285,7 @@
     width: 20%;
     align-self: center;
     height: 50%;
-    margin-left: 5%;
+    margin-left: 3%;
   }
   #addCountdown #dateEntry input {
     width: 20%;
