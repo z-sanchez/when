@@ -5,7 +5,6 @@ class CountdownBox extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            on: true,
             value: '...',
         };
     }
@@ -51,16 +50,11 @@ class CountdownBox extends React.Component {
         clearInterval(this.count);
     }
 
-    toggleState = () => {
-        this.setState({
-            on: !this.state.on,
-        });
-    }
 
 
     render() {
         return (
-            <div className="countdownBox" onClick={this.toggleState}>
+            <div className="countdownBox">
                 <div className="countdownBox__count">
                     <p>{this.props.display}</p>
                     <h1>{this.state.value}</h1>
