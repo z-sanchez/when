@@ -2,7 +2,7 @@
 # HERMES
 A React app to set visual countdowns for your next big event.
 
- ![Login Screen](/client/src/images/screenshot.png)
+ ![Login Screen](/client/src/Assets/Images/screenshot.png)
 
 ### live site (https://flamboyant-carson-d9c178.netlify.app/)
 
